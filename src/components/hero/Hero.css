@@ -1,108 +1,131 @@
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    background-color: rgba(115, 193, 110, 0.2);
-    /* background-image: image(heroimg); */
-    min-height: 70vh;
-    /* white-space: nowrap; */
-    width: 100%; 
-  }
-  
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background-image: url('src/assets/heropic.png');
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Center the image */
+  min-height: 60vh;
+  width: 100%;
+  position: relative; /* Required for proper overlay positioning */
+  z-index: 0; /* Ensure the hero section is below the navbar */
+  box-sizing: border-box;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(115, 193, 110, 0.2); /* Green with 20% opacity */
+  z-index: 1; /* Ensure the overlay is behind the text content */
+  box-sizing: border-box;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 0rem;
+  color: #F28628;
+  z-index: 2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #bd6b23;
+  z-index: 2;
+}
+
+.hero-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto; 
+  margin-right: auto; 
+  z-index: 2;
+}
+
+.hero-filter {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  background-color: #fff;
+  outline: none;
+  z-index: 2;
+}
+
+.hero-search-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  flex: 1;
+  outline: none;
+  z-index: 2;
+}
+
+.hero-search-input::placeholder {
+  color: #aaa;
+  z-index: 2;
+}
+
+.hero-button {
+  padding: 0.7rem 1.5rem;
+  background-color: #73C16E;
+  color: black;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 2;
+}
+
+.hero-button:hover {
+  background-color: #5a8457;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
   .hero-title {
-    font-size: 2.5rem;
-    margin-bottom: 0rem;
-    color: #F28628;
+    font-size: 2rem;
   }
-  
+
   .hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #bd6b23;
+    font-size: 1rem;
   }
-  
+
   .hero-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-    width: 100%;
-    max-width: 600px;
-    margin-left: auto; 
-    margin-right: auto; 
+    flex-direction: column;
+    width: 80%; /* Make search bar wider on smaller screens */
   }
-  
-  .hero-filter {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    background-color: #fff;
-    outline: none;
-  }
-  
+
+  .hero-filter,
   .hero-search-input {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-left: none;
-    border-radius: 0 5px 5px 0;
-    flex: 1;
-    outline: none;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
   }
-  
-  .hero-search-input::placeholder {
-    color: #aaa;
+
+  .hero-search-input {
+    border-left: 1px solid #ccc;
   }
-  
-  .hero-button {
-    padding: 0.7rem 1.5rem;
-    background-color: #73C16E;
-    color: black;
-    font-size: 1rem;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .hero-button:hover {
-    background-color: #5a8457;
-  }
-  
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 2rem;
-    }
-  
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-  
-    .hero-search {
-      flex-direction: column;
-      width: 80%; /* Make search bar wider on smaller screens */
-    }
-  
-    .hero-filter,
-    .hero-search-input {
-      width: 100%;
-      margin-bottom: 0.5rem;
-      border-radius: 5px;
-    }
-  
-    .hero-search-input {
-      border-left: 1px solid #ccc;
-    }
-  }
-  
+}

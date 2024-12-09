@@ -1,6 +1,6 @@
-/* Resetting default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html, body {
+  height: 100%; /* Ensure full height of the page */
+  margin: 0;    /* Remove default margin */
+  background-color: #fff5e1; /* Light gray or any color of your choice */
+  color: #333;  /* Text color */
 }

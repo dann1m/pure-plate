@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background-image: url('src/assets/heropic.png');
+  background-image: url('../../assets/heropic.png');
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; /* Center the image */
   min-height: 60vh;
@@ -23,7 +23,7 @@
   bottom: 0;
   background-color: rgba(115, 193, 110, 0.2); /* Green with 20% opacity */
   z-index: 1; /* Ensure the overlay is behind the text content */
-  box-sizing: border-box;
+  
 }
 
 .hero-content {

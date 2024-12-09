@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   base: './', // Ensures relative paths for assets
+  build: {
+    assetsInlineLimit: 0, // Prevent inlining small assets
+  },
 })

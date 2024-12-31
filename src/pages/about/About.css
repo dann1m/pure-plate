@@ -1,0 +1,52 @@
+.about-container {
+    font-family: 'Outfit';
+    text-align: center;
+    padding: 40px;
+    background-color: #84a3785b; /* Light background */
+  }
+  
+  .hero-section {
+    margin-bottom: 40px;
+  }
+  
+  .header {
+    font-size: 3rem;
+    color: #4F4F4F; /* Dark gray for header */
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    color: #6B8E23; /* Green accent */
+    margin-top: 10px;
+  }
+  
+  .content-section {
+    margin-bottom: 40px;
+  }
+  
+  .about-text {
+    font-size: 1.2rem;
+    color: #333; /* Dark text for readability */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cta-section {
+    margin-top: 30px;
+  }
+  
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #FF8C00; /* Orange accent */
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #FF7F00; /* Darker orange on hover */
+  }

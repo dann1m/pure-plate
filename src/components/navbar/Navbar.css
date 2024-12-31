@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     margin:  0;
-    padding: 0 120px; /* padding on the left and right to keep content centered */
+    padding: 5px 120px; /* padding on the left and right to keep content centered */
     background-color: #fff5e1; 
     color: #F28628;
 }
@@ -20,13 +20,23 @@
     display: flex;
     align-items: center;
     list-style: none;
-    font-size: 18px;
+    color: #F28628;
     gap: 70px;
 }
 
-.nav-diet{
+.navbar-link_diet{
+    text-decoration: none; 
     border-radius: 50px;
-    padding: 10px 38px;
+    padding: 10px 20px;
     background-color: #F28628;
     color: white;
 }
+
+.navbar-link {
+    text-decoration: none; /* Removes the underline */ 
+    color: #F28628;
+}
+
+/* .navbar-link:hover {
+background-color: #FF8C00; /* Highlight on hover */
+

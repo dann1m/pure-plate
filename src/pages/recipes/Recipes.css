@@ -1,0 +1,57 @@
+.recipes-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .recipes-header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6B8E23;
+  }
+  
+  .filters-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+  }
+  
+  .diet-filter {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .recipe-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recipe-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .recipe-title {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
